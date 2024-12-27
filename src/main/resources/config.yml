@@ -1,0 +1,101 @@
+mysql:
+  host: "localhost"
+  port: 3306
+  database: "newgifts"
+  username: "user"
+  password: "password"
+gifts:
+  time-format:
+    mon: "%mon мес. "
+    day: "%day дн. "
+    hou: "%hou ч. "
+    min: "%m м. "
+    sec: "%s сек."
+  save-type: "db" # db, yaml, mysql
+  menu:
+    name: "Получение наград!"
+    overview:
+      - "#########"
+      - "##D#W#M#"
+      - "#########"
+    items:
+      "#":
+        type: AIR
+      "D":
+        type: DAILY
+        id: GOLD_INGOT
+        name: "Ежедневная награда"
+        lore:
+          - "Нажми чтобы получить ежедневную награду!"
+        nbt:
+          - ""
+      "W":
+        type: WEEKLY
+        id: DIAMOND
+        name: "Еженедельная награда"
+        lore:
+          - "Нажми чтобы получить еженедельную награду!"
+        nbt:
+          - ""
+      "M":
+        type: MONTHLY
+        id: DIAMOND_BLOCK
+        name: "Ежемесячная награда"
+        lore:
+          - "Нажми чтобы получить ежемесячную награду!"
+        nbt:
+          - ""
+  daily:
+    commands:
+      - "p give %p 100"
+    delay in receiving:
+      chat:
+        enabled: true
+        message:
+          - "Награда будет доступна через %daily-delay%"
+      title:
+        enabled: true
+        main title: "ЗАДЕРЖКА"
+        sub title: "Награда будет доступна через %daily-delay%"
+      sound:
+        enabled: true
+        sound: UI_BUTTON_CLICK
+      hotbar:
+        enabled: true
+        message: "Ты сможешь получить награду через %daily-delay%"
+  weekly:
+    commands:
+      - "p give %p 300"
+    delay in receiving:
+      chat:
+        enabled: true
+        message:
+          - "Награда будет доступна через %weekly-delay%"
+      title:
+        enabled: true
+        main title: "ЗАДЕРЖКА"
+        sub title: "Награда будет доступна через %weekly-delay%"
+      sound:
+        enabled: true
+        sound: UI_BUTTON_CLICK
+      hotbar:
+        enabled: true
+        message: "Ты сможешь получить награду через %weekly-delay%"
+  monthly:
+    commands:
+      - "p give %p 500"
+    delay in receiving:
+      chat:
+        enabled: true
+        message:
+          - "Награда будет доступна через %monthly-delay%"
+      title:
+        enabled: true
+        main title: "ЗАДЕРЖКА"
+        sub title: "Награда будет доступна через %monthly-delay%"
+      sound:
+        enabled: true
+        sound: UI_BUTTON_CLICK
+      hotbar:
+        enabled: true
+        message: "Ты сможешь получить награду через %monthly-delay%"

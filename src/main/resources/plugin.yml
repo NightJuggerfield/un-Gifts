@@ -1,0 +1,14 @@
+name: un-Gifts
+version: 1.0
+main: dev.ungifts.Main
+api-version: 1.16
+authors: [kh9z]
+description: Плагин для получения наград
+commands:
+  gifts:
+    description: Открывает меню наград
+    usage: /gifts
+permissions:
+  ungifts.use:
+    description: Позволяет использовать команду /gifts
+    default: true
